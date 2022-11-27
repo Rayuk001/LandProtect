@@ -18,10 +18,10 @@ function claimSign(event) {
     var z = chunk.getZ();
 
     var buyProperty = function(cx, cz, name, claimer) {
-        alldata.chunks["x:" + cx + "z:" + cz] = {};
-        alldata.chunks["x:" + cx + "z:" + cz].name = name;
-        alldata.chunks["x:" + cx + "z:" + cz].owner = claimer.uniqueId.toString();
-        alldata.chunks["x:" + cx + "z:" + cz].friends = [];
+        alldata.chunks["x:" + y + "z:" + cz] = {};
+        alldata.chunks["x:" + y + "z:" + cz].name = name;
+        alldata.chunks["x:" + y + "z:" + cz].owner = claimer.uniqueId.toString();
+        alldata.chunks["x:" + y + "z:" + cz].friends = [];
         scsave(alldata, 'serverdb.json');
         echo(claimer, "Congratulations, you are now the owner of ".green() + name + "!")
     }
